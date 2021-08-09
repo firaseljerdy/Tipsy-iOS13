@@ -6,4 +6,10 @@
 //  Copyright © 2021 The App Brewery. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+struct Tip {
+    var bill: Float?
+    var totalPeople: Int?
+    var tip: String?
+}

@@ -6,4 +6,25 @@
 //  Copyright © 2021 The App Brewery. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class ResultViewController: UIViewController {
+    
+    @IBOutlet weak var billText: UILabel!
+    @IBOutlet weak var descriptionText: UILabel!
+    
+    var totalPerPerson: Float = 0.0
+    var amountPeople: Float?
+    var referenceText: String?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        billText.text = String(totalPerPerson)
+        descriptionText.text = referenceText
+    }
+    
+    @IBAction func onRecalculatePress(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+}
